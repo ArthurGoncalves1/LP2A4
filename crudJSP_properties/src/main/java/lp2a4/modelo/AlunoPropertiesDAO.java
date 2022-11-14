@@ -26,7 +26,7 @@ public class AlunoPropertiesDAO implements AlunoDAO {
 	/**
 	 * A depender do sistema operacional será necessário alterar o caminho do arquivo
 	 */
-	private static final String CAMINHO_ARQUIVO = "C:\\baseAlunos.properties";
+	private static final String CAMINHO_ARQUIVO = "C:/LP2A4/baseAlunos.properties";
 	
 	/**
 	 * Bloco estático - Está sendo utilizado para inicilizar o objeto
@@ -108,14 +108,24 @@ public class AlunoPropertiesDAO implements AlunoDAO {
 
 	@Override
 	public boolean update(AlunoPOJO aluno) {
-		log.error("AlunoPropertiesDAO.update not implemented yet.");
-		return false;
+		baseAluno.replace("nome." + aluno.getMatricula() , aluno.getNome());
+		baseAluno.replace("matricula." + aluno.getMatricula() , aluno.getMatricula());
+		baseAluno.replace("endereco." + aluno.getMatricula() , aluno.getEndereco());
+		baseAluno.replace("dataIngresso." + aluno.getMatricula() , aluno.getDataIngresso().format( AlunoUtil.DATE_FORMAT ));
+		baseAluno.replace("dataConclusao." + aluno.getMatricula() , aluno.getDataConclusao().format( AlunoUtil.DATE_FORMAT ));
+		save();
+		return true;
 	}
 
 	@Override
 	public boolean delete(String matricula) {
-		log.error("AlunoPropertiesDAO.delete not implemented yet.");
-		return false;
+		baseAluno.remove("nome." +  matricula);
+		baseAluno.remove("matricula." + matricula);
+		baseAluno.remove("endereco." + matricula);
+		baseAluno.remove("dataIngresso." + matricula);
+		baseAluno.remove("dataConclusao." + matricula );
+		save();
+		return true;
 	}
 
 }

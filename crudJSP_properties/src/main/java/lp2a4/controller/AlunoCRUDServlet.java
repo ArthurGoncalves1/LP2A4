@@ -36,6 +36,7 @@ public class AlunoCRUDServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("get");
 		processRequest(request, response);
 	}
 
@@ -44,6 +45,7 @@ public class AlunoCRUDServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("post");
 		processRequest(request, response);
 	}
 	
@@ -67,6 +69,7 @@ public class AlunoCRUDServlet extends HttpServlet {
 		
 		try {
 			final CommandEnum acao = CommandEnum.valueOf( acaoParam != null? acaoParam :  CommandEnum.DESCONHECIDO.toString() );
+			System.out.println(acao);
 			final Command comando = Command.commandFactory(acao);
 			comando.execute(request, response);
 		} catch( Exception e) {

@@ -6,6 +6,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lp2a4.Logger;
+import lp2a4.modelo.AlunoDAO;
 
 public class DeleteCommand implements Command {
 	
@@ -13,8 +14,15 @@ public class DeleteCommand implements Command {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		log.info("DELETE NOT IMPLEMENTED YET");
-		response.getOutputStream().print("DELETE NOT IMPLEMENTED YET");
+		final AlunoDAO dao = AlunoDAO.getInstance();
+
+		if ( dao.delete(request.getParameter("matricula")) ) {
+			response.getWriter().append("Aluno removido com sucesso!");
+			log.info("Aluno removido com sucesso!");
+		} else {
+			response.getWriter().append("Remoção não funcionou!");	
+			log.error("Remoção não funcionou!");
+		}
 	}
 
 }

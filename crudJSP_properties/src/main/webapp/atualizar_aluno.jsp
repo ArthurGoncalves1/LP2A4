@@ -13,7 +13,7 @@
 <!-- o id deve ter o mesmo nome do atributo configurado no request -->
 <jsp:useBean id="aluno" class="lp2a4.modelo.AlunoPOJO" scope="request"></jsp:useBean>
 
-<form id="update_form" action="./controller">
+<form id="update_form" action="./controller" method="post">
 	<input type="hidden" name="acao" id="acao" value="<%=CommandEnum.UPDATE%>"/>
 	<input type="hidden" name="matricula" id="matricula" value="<jsp:getProperty property="matricula" name="aluno"/>"/>
 	<table border="1">
@@ -34,13 +34,13 @@
 			</td>
 		</tr>
 		<tr>
-			<td>Data Ingresso : </td>
+			<td>Data Ingresso (dd/mm/aaaa): </td>
 			<td>
 				<input class="edicao" type="text" id="dataIngresso" name="dataIngresso" value="<jsp:getProperty property="dataIngresso" name="aluno"/>"/>
 			</td>
 		</tr>
 		<tr>
-			<td>Data Término : </td>
+			<td>Data Término (dd/mm/aaaa): </td>
 			<td>
 				<input class="edicao" type="text" id="dataConclusao" name="dataConclusao" value="<jsp:getProperty property="dataConclusao" name="aluno"/>"/>
 			</td>

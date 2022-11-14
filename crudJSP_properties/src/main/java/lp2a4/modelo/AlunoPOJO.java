@@ -49,4 +49,10 @@ public class AlunoPOJO {
 	public void setDataConclusao(LocalDate dataConclusao) {
 		this.dataConclusao = dataConclusao;
 	}
+	@Override
+	public String toString() {
+		return "AlunoPOJO [matricula=" + matricula + ", nome=" + nome + ", endereco=" + endereco + ", dataIngresso="
+				+ dataIngresso + ", dataConclusao=" + dataConclusao + "]";
+	}
+	
 }

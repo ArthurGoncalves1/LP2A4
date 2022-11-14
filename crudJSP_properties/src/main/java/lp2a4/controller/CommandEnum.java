@@ -1,8 +1,8 @@
 package lp2a4.controller;
 
 public enum CommandEnum {
-	CREATE ,
-	RETRIEVE ,
+	CREATE,
+	RETRIEVE,
 	UPDATE,
 	NAVIGATE_UPDATE,
 	DELETE,

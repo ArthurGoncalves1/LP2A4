@@ -10,7 +10,7 @@
     <servlet-name>AlunoCRUDServlet</servlet-name>
     <url-pattern>/controller</url-pattern>
   </servlet-mapping>
-  <display-name>CrudJSP_copia</display-name>
+  <display-name>CrudJSP_properties</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
