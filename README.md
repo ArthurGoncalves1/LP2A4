@@ -8,7 +8,7 @@ Esse repositório será utilizado para armazenar as atividades desenvolvidas dur
 - Atividade 2: CRUD Properties
 - Atividade 3: CRUD JDBC
 - Atividade 4: CRUD JPA
-- Atividade 5: Desafio JPA
+- Atividade 5: Desafio JPA(ManyToMany)
 
 
 insert into proprietario (codigo, nome, email, telefone) values (1, 'João Silva', 'joao@email.com', '9999-9999');
