@@ -1,6 +1,6 @@
 # Repositório - LP2A4
 
-Esse repositório será utilizado para armazenar as atividades desenvolvidas durante o 4° semestre da disciplina de Linguagem de Proggramação 2, ministrada pelo professor Diego Caldas.
+Esse repositório será utilizado para armazenar as atividades desenvolvidas durante o 4° semestre da disciplina de Linguagem de Programação 2, ministrada pelo professor Diego Caldas.
 
 ## Atividades
 
